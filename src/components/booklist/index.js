@@ -57,7 +57,7 @@ class BookList extends Component {
   }
 
   render = () => {
-    const { classes, columnHeaders, books, loading } = this.props
+    const { classes, columnHeaders, books, loading, history } = this.props
     const { order, orderBy, rowsPerPage, page } = this.state
     const start = page * rowsPerPage
     const end = start + rowsPerPage
@@ -82,7 +82,7 @@ class BookList extends Component {
                   .sort(getSorting(order, orderBy))
                   .slice(start, end)
                   .map(book => (
-                    <Book key={book.id} book={book} typesMapping={rowColumns} />
+                    <Book key={book.id} book={book} typesMapping={rowColumns} history={history} />
                   ))}
               </TableBody>
             </Table>

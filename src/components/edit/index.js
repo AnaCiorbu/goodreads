@@ -4,12 +4,13 @@ import withStyles from '@material-ui/core/styles/withStyles'
 import { withRouter } from 'react-router'
 import styles from './styles'
 
-const EditBook = ({ classes }) => {
+const EditBook = ({ classes, match }) => {
+  const bookId = match.params.id
   return (
     <Fragment>
       <div className={classes.container}>
         <Paper elevation={1} className={classes.paper}>
-          <h1>Book Editing Form for book id -add here id-</h1>
+          <h1>Book Editing Form for book {bookId}</h1>
         </Paper>
       </div>
     </Fragment>
