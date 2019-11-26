@@ -12,7 +12,7 @@ const Routes = ({ store }) => (
       <Fragment>
         <Switch>
           <Route exact path="/" render={props => <App {...props} />} />
-          <Route path="/edit" render={() => <EditBook />} />
+          <Route path="/edit/:id" render={props => <EditBook {...props} />} />
         </Switch>
       </Fragment>
     </Router>

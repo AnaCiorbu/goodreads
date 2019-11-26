@@ -32,13 +32,13 @@ const Book = ({ classes, book, typesMapping }) => {
         } else if (column.id === 'small_image_url') {
           return (
             <TableCell key={column.id}>
-              <img src={book.small_image_url} alt={book.original_title} />
+              <img src={book.small_image_url} alt={book.title} />
             </TableCell>
           )
         } else if (column.id === 'edit') {
           return (
             <TableCell key={column.id}>
-              <Link to={{ pathname: '/edit', state: { bookId: book.id } }}>
+              <Link to={{ pathname: `/edit/${book.id}`, state: { book } }}>
                 <Fab color="secondary" aria-label="edit">
                   <EditIcon />
                 </Fab>
@@ -69,7 +69,7 @@ Book.propTypes = {
     isbn: PropTypes.string.isRequired,
     isbn13: PropTypes.string.isRequired,
     authors: PropTypes.string.isRequired,
-    original_title: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
     original_publication_year: PropTypes.string.isRequired,
     average_rating: PropTypes.string.isRequired,
     language_code: PropTypes.string.isRequired,

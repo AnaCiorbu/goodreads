@@ -28,7 +28,7 @@ export default {
     { id: 'isbn13', numeric: true, disablePadding: false, label: 'ISBN13' },
     { id: 'authors', numeric: false, disablePadding: false, label: 'Author' },
     {
-      id: 'original_title',
+      id: 'title',
       numeric: false,
       disablePadding: false,
       label: 'Title',

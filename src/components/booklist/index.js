@@ -29,7 +29,7 @@ class BookList extends Component {
     super(props)
     this.state = {
       order: 'asc',
-      orderBy: 'original_title',
+      orderBy: 'title',
       page: 0,
       rowsPerPage: 10,
     }
